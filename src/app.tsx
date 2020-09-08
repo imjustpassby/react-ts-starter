@@ -1,4 +1,5 @@
 import React, { Suspense, useState } from 'react'
+import { Button } from 'antd'
 import './app.scss'
 
 const ComputedOne = React.lazy(() => import('Components/ComputedOne'))
@@ -12,6 +13,7 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <ComputedOne a={1} b={2} />
         {showTwo && <ComputedTwo a={3} b={4} />}
+        <Button type='primary'>Antd Primary Button</Button>
         <button type='button' onClick={() => setShowTwo(true)}>
           显示Two啊啊啊
         </button>

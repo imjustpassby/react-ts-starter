@@ -77,6 +77,9 @@ module.exports = {
             loader: 'less-loader',
             options: {
               sourceMap: isDev,
+              lessOptions: {
+                javascriptEnabled: true
+              }
             },
           },
         ],
